@@ -4,11 +4,13 @@ import {User} from "../config/userModel.js";
 import {validateToken} from "../middlewares/validateToken.js";
 import {checkRole} from "../middlewares/RoleCheck.js";
 import { bookTable } from "../controllers/seatbookController.js";
+import { createOrder } from "../controllers/orderController.js";
 const router = express.Router();
 
 router.post("/register",RegisterUser);
 router.post("/login",loginUser);
 router.post("/bookTable", validateToken, bookTable);
+router.post("/order", validateToken, createOrder);
 
 
 router.get("/admin", validateToken, checkRole(['admin']), (req, res) => {
