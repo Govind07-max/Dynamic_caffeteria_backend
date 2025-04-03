@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+       body{
+    
+        font-family: Arial, Helvetica, sans-serif;
+        /* background-image: url("images/image.png"); */
+        margin : 0;
+        padding : 0;
+        height : 100vh;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+         
+       }
+       .card {
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      color: #000; 
+    }
+    
+       h1{ 
+        text-align: center;
+        padding : 10px;
+
+       }
+       form{
+        display:flex;
+        flex-direction: column;
+        gap: 5px;
+
+       }
+       input{
+        background-color: rgb(245, 208, 208);
+        color:rgb(10, 9, 9);
+        padding: 10px;
+        border-radius: 8px;
+        border : 1px solid black;
+
+       }
+       input:hover{
+        background-color: rgba(212, 63, 78, 0.356);
+       }
+       button{
+        background-color: rgb(76, 176, 219);
+        padding : 10px;
+        border-radius: 8px;
+       }
+       button:hover{
+        background-color: #0e89ee;
+       }
+       p{
+        color:rgb(150, 53, 53);
+        font-weight: 200;
+        
+
+       }
+    </style>
+
+</head>
+<body>
+    <div class = 'card'>
+        <h1 style = color:brown>Login</h1>
+        <form id="login-form">
+            
+             
+            
+             <input placeholder="Enter your email" type="email" name="email" id="login-email">
+            
+             <input placeholder="password" type="password" name="password" id="login-password">
+            
+            <button type="submit">Log in</button>
+            <p>don't have an account? <a href="signup.html" class="login-link">sign up</a></p>
+        </div>
+    </form>
+    <script src="login.js"></script>
+</body>
+    
+</html>
