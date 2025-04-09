@@ -5,12 +5,15 @@ import {validateToken} from "../middlewares/validateToken.js";
 import {checkRole} from "../middlewares/RoleCheck.js";
 import { bookTable } from "../controllers/seatbookController.js";
 import { createOrder } from "../controllers/orderController.js";
+import { updateTraffic, getTraffic } from "../controllers/trafficController.js";
 const router = express.Router();
 
 router.post("/register",RegisterUser);
 router.post("/login",loginUser);
 router.post("/bookTable", validateToken, bookTable);
 router.post("/order", validateToken, createOrder);
+router.get("/getTraffic", validateToken, getTraffic); // public route for frontend
+router.post("/updateTraffic", validateToken, updateTraffic); // only admin via token
 
 
 router.get("/admin", validateToken, checkRole(['admin']), (req, res) => {
