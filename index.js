@@ -6,6 +6,7 @@ import cors from "cors";
 import path from "path";
 import http from "http"; // Required to create an HTTP server
 import { Server } from "socket.io"; // Import Socket.IO
+import paymentRoutes from "./routes/paymentRoutes.js";
 
 dotenv.config();
 
@@ -55,6 +56,7 @@ connectDB();
 
 // Routes
 app.use("/api/users", userRouter);
+app.use("/api/payment", paymentRoutes);
 
 // Start the server
 server.listen(port, () => {
