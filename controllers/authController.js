@@ -52,7 +52,7 @@ const RegisterUser = asyncHandler(async (req, res) => {
         to: user.email,
         subject: 'Email Verification',
         text: `Please verify your email by clicking the following link: 
-        http://localhost:5000/api/users/verify-email?token=${verificationToken}`
+        https://dynamic-caffeteria-backend.onrender.com/api/users/verify-email?token=${verificationToken}`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
