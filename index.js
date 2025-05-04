@@ -24,7 +24,7 @@ app.use(express.json());
 
 // Serve static files
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "src/")));
+app.use(express.static(path.join(__dirname, "utils")));
 
 // Create an HTTP server and attach Socket.IO
 const server = http.createServer(app);

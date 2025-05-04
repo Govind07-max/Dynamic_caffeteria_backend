@@ -39,8 +39,7 @@ router.get("/admin", validateToken, checkRole(['admin']), (req, res) => {
     user.verificationToken = undefined;
     await user.save();
 
-    res.status(200) 
-    res.json({message:"email verified successfully"})
+    res.redirect('/utils/verificationMail.html');
 
   })
 
